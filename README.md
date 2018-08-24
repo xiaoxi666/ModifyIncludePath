@@ -45,8 +45,6 @@ int AbstractAssembler::code_fill_byte() {
 
 2. 处理List中保存的文件，每个文件处理时读取Set中匹配的文件夹，将诸如`#include "asm`等形式替换成`#include "./src/share/vm/asm`，即可。
 
-   ​
-
 ## 其他问题
 
 还有一些文件依赖于特定的平台，如`./src/share/vm/utilities/copy.hpp`中：
