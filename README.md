@@ -36,7 +36,7 @@ int AbstractAssembler::code_fill_byte() {
 
 当然，我们可以手动寻找对应的头文件，然后一个一个补全；但是文件数量有上千个，这样会耗费许多时间，也因此有了本项目——自动补全include中的路径。查看不同文件中的include路径，发现有两大类，一类是`include "precompiled.hpp"`，一类是包含在文件夹`./src/share/vm`下的各个头文件，如`asm`、`prims`、`oop`、`utilities`等，因此解决步骤如下：
 
-1. 对于`"precompiled.hpp"，我们可以直接用编辑器将其全部替换为`include "./src/share/vm/precompiled/precompiled.hpp"`;
+1. 对于`"precompiled.hpp"`，我们可以直接用编辑器将其全部替换为`include "./src/share/vm/precompiled/precompiled.hpp"`;
 2. 对于其他诸如`include "asm/assembler.hpp"`、`#include "oops/oop.inline.hpp"`、`#include "utilities/accessFlags.hpp"`等依赖不同文件路径的头文件，利用本项目中的程序自动将其补全。
 
 ## 实现原理
