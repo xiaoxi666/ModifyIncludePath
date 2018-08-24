@@ -98,7 +98,7 @@ public class IncludePathModifier {
         }
     }
 
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         modifyIncludePath();
     }
 }
