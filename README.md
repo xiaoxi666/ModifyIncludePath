@@ -2,9 +2,9 @@
 
 ## 前言
 
-读java native源代码时，我们一般会去网站下载[openjdk8源码](http://download.java.net/openjdk/jdk8/promoted/b132/openjdk-8-src-b132-03_mar_2014.zip) （http://download.java.net/openjdk/jdk8/promoted/b132/openjdk-8-src-b132-03_mar_2014.zip）， 然后进行分析，随后很多文章会让你编译。其实，如果只是为了分析源码，完全不用编译，直接找到hotspot文件夹下的src文件夹查看即可，这里就是hotspot的源码。
+读java native源代码时，我们一般会去网站下载[openjdk8源码](http://download.java.net/openjdk/jdk8/promoted/b132/openjdk-8-src-b132-03_mar_2014.zip) （ http://download.java.net/openjdk/jdk8/promoted/b132/openjdk-8-src-b132-03_mar_2014.zip ），然后进行分析，随后很多文章会让你编译。其实，如果只是为了分析源码，完全不用编译，直接找到hotspot文件夹下的src文件夹查看即可，这里就是hotspot的源码。
 
-*注意：官网的源码下载地址写错了，它写成了http://www.java.net/download/openjdk/jdk8/promoted/b132/openjdk-8-src-b132-03_mar_2014.zip* ，*这个网址是打不开的*
+*注意：官网的源码下载地址写错了，它写成了 http://www.java.net/download/openjdk/jdk8/promoted/b132/openjdk-8-src-b132-03_mar_2014.zip ，这个网址是打不开的*
 
 ## 存在的问题
 
