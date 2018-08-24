@@ -25,7 +25,7 @@ public class IncludePathModifier {
     /**
      * 补齐include包含文件路径
      */
-    public static void modifyIncludePath () {
+    public static void modifyIncludePath() {
         getFileListsAndFolderSets(new File(rootPath));
         fileLists.forEach(f -> loadFileByLine(f));
     }
@@ -37,7 +37,7 @@ public class IncludePathModifier {
      * 2.同时获取其文件夹目录，存在Set中（Set是为了相同的只存一次）
      * @param currentPath
      */
-    public static void getFileListsAndFolderSets (File currentPath) {
+    public static void getFileListsAndFolderSets(File currentPath) {
         for (File tmp : currentPath.listFiles()) {
             if (tmp.isDirectory()) {
                 getFileListsAndFolderSets(tmp);
@@ -54,7 +54,7 @@ public class IncludePathModifier {
      * @param fileName
      * @return
      */
-    public static boolean filterFileByExt (String fileName) {
+    public static boolean filterFileByExt(String fileName) {
         String suffix = fileName.substring(fileName.lastIndexOf(".") + 1);
         if ("hpp".equals(suffix) || "cpp".equals(suffix)
             || "c".equals(suffix) || "h".equals(suffix)) {
@@ -67,7 +67,7 @@ public class IncludePathModifier {
      * 逐行处理，利用newLines作为缓冲，替换后再写入源文件
      * @param fileAbsolutePath
      */
-    public static void loadFileByLine (String fileAbsolutePath) {
+    public static void loadFileByLine(String fileAbsolutePath) {
         try {
             List<String> lines = Files.readAllLines(Paths.get(fileAbsolutePath));
             List<String> newLines = new ArrayList<>();
@@ -97,8 +97,6 @@ public class IncludePathModifier {
             e.printStackTrace();
         }
     }
-
-
 
     public static void main (String[] args) {
         modifyIncludePath();
